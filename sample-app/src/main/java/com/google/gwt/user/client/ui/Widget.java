@@ -24,6 +24,11 @@ public class Widget implements IsWidget
 		setElementWidget(element, this);
 	}
 
+	public void setStyleName(String cssClassName)
+	{
+		getElement().setClassName(cssClassName);
+	}
+
 	protected static final native void setElementWidget(JsElement element, Widget widget)
 	/*-{
 		element.__widget = widget;

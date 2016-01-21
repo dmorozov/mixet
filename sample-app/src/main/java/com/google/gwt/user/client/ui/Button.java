@@ -5,6 +5,7 @@ import com.google.gwt.event.shared.HandlerRegistration;
 
 import elemental.events.Event;
 import elemental.events.EventListener;
+import elemental.events.EventRemover;
 import elemental.js.JsBrowser;
 import elemental.js.html.JsButtonElement;
 
@@ -20,15 +21,24 @@ public class Button extends Widget
 
 	public HandlerRegistration addClickHandler(final ClickHandler handler)
 	{
-		getElement().addEventListener("click", new EventListener()
+		EventListener listener = new EventListener()
 		{
 			@Override
 			public void handleEvent(Event evt)
 			{
 				handler.onClick(null);
 			}
-		}, false);
+		};
 
-		return null;
+		EventRemover remover = getElement().addEventListener("click", listener, false);
+
+		return new HandlerRegistration()
+		{
+			@Override
+			public void removeHandler()
+			{
+				remover.remove();
+			}
+		};
 	}
 }
