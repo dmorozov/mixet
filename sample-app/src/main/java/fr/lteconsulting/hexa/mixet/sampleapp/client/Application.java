@@ -6,6 +6,7 @@ import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.VerticalPanel;
 
 public class Application implements EntryPoint
 {
@@ -29,9 +30,12 @@ public class Application implements EntryPoint
 		// }
 		// });
 
-		RootPanel.get().add(label);
-		RootPanel.get().add(tb);
-		RootPanel.get().add(button);
+		VerticalPanel panel = new VerticalPanel();
+		panel.add(label);
+		panel.add(tb);
+		panel.add(button);
+
+		RootPanel.get().add(panel);
 	}
 }
 

@@ -3,7 +3,7 @@ package com.google.gwt.user.client.ui;
 import elemental.js.JsBrowser;
 import elemental.js.html.JsInputElement;
 
-public class TextBox extends WidgetBase
+public class TextBox extends Widget
 {
 	public TextBox()
 	{

@@ -8,7 +8,7 @@ import elemental.events.EventListener;
 import elemental.js.JsBrowser;
 import elemental.js.html.JsButtonElement;
 
-public class Button extends WidgetBase
+public class Button extends Widget
 {
 	public Button(String text)
 	{
