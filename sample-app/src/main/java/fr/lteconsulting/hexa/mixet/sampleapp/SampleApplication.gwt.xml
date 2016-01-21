@@ -3,7 +3,7 @@
 <module rename-to="application">
 	<!-- <inherits name="com.google.gwt.user.User" />
 	<inherits name="com.google.gwt.json.JSON" /> -->
-	<inherits name="com.google.gwt.user.UserMixet" />
+	<inherits name="com.google.gwt.Mixet" />
 	
 	<source path="client" />
 

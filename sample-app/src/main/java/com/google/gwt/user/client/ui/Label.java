@@ -8,8 +8,13 @@ public class Label extends WidgetBase
 	public Label(String text)
 	{
 		JsDivElement div = JsBrowser.getDocument().createDivElement();
-		div.setInnerText(text);
-
 		setElement(div);
+
+		setText(text);
+	}
+
+	public void setText(String text)
+	{
+		getElement().setInnerText(text);
 	}
 }
